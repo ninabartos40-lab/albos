@@ -118,7 +118,9 @@ Contributions are welcome in the following areas:
 
 ## Contact
 
-If you want to contribute or test the project, open an issue or contact the repository owner.
+If you want to contribute or test the project, open an issue or contact the repository owner. 
+
+And if you like albos tell your friends
 
 ---
 
