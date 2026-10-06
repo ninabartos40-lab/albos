@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#111111"
+    android:orientation="vertical"
+    android:padding="18dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Type a message"
+        android:textColor="#BDBDBD"
+        android:textSize="16sp"
+        android:padding="12dp"
+        android:layout_marginBottom="10dp" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="4"
+        android:padding="6dp">
+
+        <TextView style="@style/KeyboardKey" android:text="Q" />
+        <TextView style="@style/KeyboardKey" android:text="W" />
+        <TextView style="@style/KeyboardKey" android:text="E" />
+        <TextView style="@style/KeyboardKey" android:text="R" />
+        <TextView style="@style/KeyboardKey" android:text="T" />
+        <TextView style="@style/KeyboardKey" android:text="Y" />
+        <TextView style="@style/KeyboardKey" android:text="U" />
+        <TextView style="@style/KeyboardKey" android:text="I" />
+        <TextView style="@style/KeyboardKey" android:text="O" />
+        <TextView style="@style/KeyboardKey" android:text="P" />
+        <TextView style="@style/KeyboardKey" android:text="A" />
+        <TextView style="@style/KeyboardKey" android:text="S" />
+        <TextView style="@style/KeyboardKey" android:text="D" />
+        <TextView style="@style/KeyboardKey" android:text="F" />
+        <TextView style="@style/KeyboardKey" android:text="G" />
+        <TextView style="@style/KeyboardKey" android:text="H" />
+        <TextView style="@style/KeyboardKey" android:text="J" />
+        <TextView style="@style/KeyboardKey" android:text="K" />
+        <TextView style="@style/KeyboardKey" android:text="L" />
+        <TextView style="@style/KeyboardKey" android:text="&lt;" />
+        <TextView style="@style/KeyboardKey" android:text="Z" />
+        <TextView style="@style/KeyboardKey" android:text="X" />
+        <TextView style="@style/KeyboardKey" android:text="C" />
+        <TextView style="@style/KeyboardKey" android:text="V" />
+        <TextView style="@style/KeyboardKey" android:text="B" />
+        <TextView style="@style/KeyboardKey" android:text="N" />
+        <TextView style="@style/KeyboardKey" android:text="M" />
+        <TextView style="@style/KeyboardKey" android:text="⌫" />
+        <TextView style="@style/KeyboardKey" android:text="123" />
+        <TextView style="@style/KeyboardKey" android:text="," />
+        <TextView style="@style/KeyboardKeyWide" android:text="space" />
+        <TextView style="@style/KeyboardKey" android:text="." />
+        <TextView style="@style/KeyboardKeyAccent" android:text="Enter" />
+    </GridLayout>
+
+</LinearLayout>
+
