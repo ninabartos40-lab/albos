@@ -1,0 +1,45 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.AlbOSSetupWizard" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/setupWizardAccent</item>
+        <item name="colorPrimaryDark">@color/setupWizardAccentDark</item>
+        <item name="colorAccent">@color/setupWizardAccent</item>
+        <item name="android:windowBackground">@color/setupWizardBackground</item>
+        <item name="android:statusBarColor">@color/setupWizardBackground</item>
+        <item name="android:navigationBarColor">@color/setupWizardBackground</item>
+        <item name="android:textColorPrimary">@color/setupWizardTextPrimary</item>
+        <item name="android:textColorSecondary">@color/setupWizardTextSecondary</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+    </style>
+
+    <style name="SetupWizardButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textColor">@color/setupWizardButtonText</item>
+        <item name="backgroundTint">@color/setupWizardButton</item>
+        <item name="cornerRadius">8dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="SetupWizardTitle">
+        <item name="android:textColor">@color/setupWizardTextPrimary</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SetupWizardSubtitle">
+        <item name="android:textColor">@color/setupWizardTextSecondary</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif</item>
+    </style>
+
+    <style name="SetupWizardCard">
+        <item name="android:background">@drawable/setup_wizard_card_background</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:padding">16dp</item>
+    </style>
+</resources>

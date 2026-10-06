@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/setupWizardBackground"
+    android:padding="0dp"
+    tools:context=".setup.SetupWizardActivity"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Header with logo and status -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/setupWizardSurfacePrimary"
+        android:padding="20dp"
+        android:elevation="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="AlbOS Setup"
+            android:textColor="@color/setupWizardTextPrimary"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/setup_step_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/5"
+            android:textColor="@color/setupWizardTextSecondary"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Progress bar -->
+    <ProgressBar
+        android:id="@+id/setup_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:progress="20"
+        android:max="100"
+        android:progressTint="@color/setupWizardAccent"
+        android:progressBackgroundTint="@color/setupWizardDivider"
+        android:layout_margin="0dp" />
+
+    <!-- Main content area -->
+    <FrameLayout
+        android:id="@+id/setup_content_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="24dp">
+
+        <!-- Welcome Screen -->
+        <LinearLayout
+            android:id="@+id/screen_welcome"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@android:drawable/ic_menu_view"
+                android:tint="@color/setupWizardAccent"
+                android:contentDescription="AlbOS Logo"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                style="@style/SetupWizardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome to AlbOS"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                style="@style/SetupWizardSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Let's set up your Samsung Galaxy S5 with AlbOS Android 12. This will take just a few minutes."
+                android:gravity="center"
+                android:layout_marginBottom="32dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_compass"
+                        android:tint="@color/setupWizardAccent"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Wireless & Network setup"
+                        android:textColor="@color/setupWizardTextPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        android:tint="@color/setupWizardAccent"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Google Account configuration"
+                        android:textColor="@color/setupWizardTextPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_lock_silent_mode"
+                        android:tint="@color/setupWizardAccent"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Security & Privacy settings"
+                        android:textColor="@color/setupWizardTextPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@android:drawable/ic_menu_gallery"
+                        android:tint="@color/setupWizardAccent"
+                        android:layout_marginEnd="12dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pre-installed Google Apps"
+                        android:textColor="@color/setupWizardTextPrimary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Wi-Fi Screen -->
+        <LinearLayout
+            android:id="@+id/screen_wifi"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SetupWizardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect to Wi-Fi"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                style="@style/SetupWizardSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select your Wi-Fi network to continue setup"
+                android:layout_marginBottom="24dp" />
+
+            <ListView
+                android:id="@+id/wifi_networks_list"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:divider="@color/setupWizardDivider"
+                android:dividerHeight="1dp" />
+
+        </LinearLayout>
+
+        <!-- Google Account Screen -->
+        <LinearLayout
+            android:id="@+id/screen_google_account"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SetupWizardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Google Account"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                style="@style/SetupWizardSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in to your Google Account for access to Gmail, Drive, Maps and more"
+                android:layout_marginBottom="32dp" />
+
+            <EditText
+                android:id="@+id/email_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Email address"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:background="@color/setupWizardSurfacePrimary"
+                android:textColor="@color/setupWizardTextPrimary"
+                android:textColorHint="@color/setupWizardTextMuted"
+                android:layout_marginBottom="16dp" />
+
+            <EditText
+                android:id="@+id/password_input"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:background="@color/setupWizardSurfacePrimary"
+                android:textColor="@color/setupWizardTextPrimary"
+                android:textColorHint="@color/setupWizardTextMuted"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Don't have a Google Account? Create one on google.com"
+                android:textColor="@color/setupWizardAccent"
+                android:textSize="14sp"
+                android:gravity="center" />
+        </LinearLayout>
+
+        <!-- Security Screen -->
+        <LinearLayout
+            android:id="@+id/screen_security"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                style="@style/SetupWizardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Security & Privacy"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                style="@style/SetupWizardSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Protect your device and data"
+                android:layout_marginBottom="24dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/setup_wizard_card_background"
+                android:layout_marginBottom="12dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_screen_lock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Screen Lock (PIN/Password)"
+                        android:textColor="@color/setupWizardTextPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Require PIN or password to unlock device"
+                        android:textColor="@color/setupWizardTextSecondary"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:background="@drawable/setup_wizard_card_background"
+                android:layout_marginBottom="12dp">
+
+                <CheckBox
+                    android:id="@+id/checkbox_biometric"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Biometric Authentication"
+                        android:textColor="@color/setupWizardTextPrimary"
+                        android:textSize="16sp"
+                        android:fontFamily="sans-serif-medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use fingerprint to unlock (if available)"
+                        android:textColor="@color/setupWizardTextSecondary"
+                        android:textSize="13sp"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Completion Screen -->
+        <LinearLayout
+            android:id="@+id/screen_complete"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:src="@android:drawable/ic_menu_info_details"
+                android:tint="@color/setupWizardSuccess"
+                android:contentDescription="Setup Complete"
+                android:layout_marginBottom="24dp" />
+
+            <TextView
+                style="@style/SetupWizardTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Setup Complete!"
+                android:layout_marginBottom="8dp" />
+
+            <TextView
+                style="@style/SetupWizardSubtitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your AlbOS device is ready to use. All Google Apps are pre-installed and ready."
+                android:gravity="center"
+                android:layout_marginBottom="32dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <!-- Bottom buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:background="@color/setupWizardSurfacePrimary"
+        android:elevation="4dp">
+
+        <Button
+            android:id="@+id/btn_skip"
+            style="@style/SetupWizardButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Skip"
+            android:textColor="@color/setupWizardAccent"
+            android:background="@color/setupWizardSurfaceSecondary"
+            android:layout_marginEnd="12dp" />
+
+        <Button
+            android:id="@+id/btn_next"
+            style="@style/SetupWizardButton"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="Next"
+            android:background="@drawable/setup_wizard_button_background" />
+    </LinearLayout>
+
+</LinearLayout>
