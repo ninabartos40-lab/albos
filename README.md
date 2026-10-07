@@ -7,7 +7,7 @@ This repository is currently a concept and prototype project. It is intended as 
 ## Project Status
 
 - Status: Concept / prototype
-- Target device: Samsung Galaxy S5
+- Target device: Samsung Galaxy young 
 - Primary focus: Android-inspired UI and ROM customization
 - Current goal: Create a clean, modern, lightweight custom ROM experience for older Samsung devices
 
