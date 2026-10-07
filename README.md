@@ -37,13 +37,10 @@ For a real custom ROM build, the following minimum requirements are recommended:
 
 Primary target:
 
-- Samsung Galaxy S5
+- Samsung Galaxy young
 
 Not recommended for Android 12 custom ROM use:
-
-- Samsung S3
-- Samsung S4 Mini
-- Older devices with limited RAM and weak kernel support
+Made for older devices with limited RAM and weak kernel support
 
 ## Repository Structure
 
