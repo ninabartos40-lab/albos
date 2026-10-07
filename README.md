@@ -29,7 +29,7 @@ For a real custom ROM build, the following minimum requirements are recommended:
 - Minimal, modern setup wizard
 - Dark theme / light theme ready structure
 - Battery and charging visual states
-- Samsung S5-focused hardware targeting
+- Samsung young -focused hardware targeting
 - Modular project structure for future ROM development
 - Android Studio demo support for UI testing
 
@@ -66,7 +66,7 @@ This file includes:
 
 - prerequisites
 - bootloader unlocking
-- TWRP installation
+- any recovery installation
 - flashing steps
 - recovery installation
 - GApps setup
