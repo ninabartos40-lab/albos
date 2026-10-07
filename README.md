@@ -15,9 +15,9 @@ This repository is currently a concept and prototype project. It is intended as 
 
 For a real custom ROM build, the following minimum requirements are recommended:
 
-- Samsung Galaxy S5
-- 2GB RAM minimum
-- 16GB internal storage minimum
+- Samsung Galaxy young
+- 209GB RAM minimum
+- 2GB internal storage minimum
 - Unlocked bootloader
 - TWRP Recovery installed
 - USB Debugging enabled
