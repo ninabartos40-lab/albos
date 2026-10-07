@@ -19,7 +19,7 @@ For a real custom ROM build, the following minimum requirements are recommended:
 - 209GB RAM minimum
 - 2GB internal storage minimum
 - Unlocked bootloader
-- TWRP Recovery installed
+- any Recovery installed
 - USB Debugging enabled
 - Compatible kernel and device tree support
 
